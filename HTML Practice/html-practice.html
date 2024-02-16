@@ -11,6 +11,23 @@
             border: 1px solid black;
             border-collapse: collapse;
         }
+        .button{
+            text-decoration: none;
+            padding: 15px;
+            background-color: red;
+            color: blue;
+            display: inline-block;
+        }
+        .button:active{
+            background-color: blue;
+            color:red;
+        }
+        form{
+            border: 2px solid black;
+            padding: 15px;
+            width: 50%;
+            margin: auto;
+        }
     </style>
 </head>
 <body>
@@ -194,7 +211,63 @@
     <h2 style="color:red">Iframe</h2>
     
     <iframe src="image.jpg" name="iframe" frameborder="1" width="100%" height="500px" title="Iframe Example"></iframe>
-    <p><a href="https://www.youtube.com/" target="iframe">Click Here</a></p>
+    <p><a class="button" href="https://www.bing.com/" target="iframe">Click Here</a></p>
+</div>
+
+<div>
+    <form action="/action_page.php">
+        <h2 style="text-align:center;">Student Form</h2>
+        <p><b>Personal Details:</b></p>
+        <label for="fname">Firsh Name:- </label>
+        <input type="text" name="fname" value="Akash" id="fname" readonly   >
+
+        <label for="lname">Last Name:- </label>
+        <input type="text" name="lname" id="lname">
+
+        <p><b>Email Address:</b></p>
+        <label for="email">Email ID:- </label>
+        <input type="emial" id="email" name="email" required>
+
+        <p><b>Date Of Birth:</b></p>
+        <label for="dob">Birth Date:- </label>
+        <input type="date" name="dob" id="dob" min="1991-12-31">
+
+        <p><b>Mobile Number:</b></p>
+        <label for="monum">Number:- </label>
+        <input type="tel" name="monum" id="monum" pattern="[0-9]{10}" required>
+
+        <p><b>Course:</b></p>
+        <input type="radio" id="html" name="radio">
+        <label for="html">HTML</label>
+        <input type="radio" id="css" name="radio">
+        <label for="css">CSS</label>
+        <input type="radio" id="javascript" name="radio">
+        <label for="javascript">Java Script</label>
+
+        <p><b>Language:</b></p>
+        <input type="checkbox" name="english" id="eng">
+        <label for="eng">English</label>
+        <input type="checkbox" name="hindi" id="hindi">
+        <label for="hindi">Hindi</label>
+        <input type="checkbox" id="guj" name="gujarati">
+        <label for="guj">Gujarati</label>
+        <input type="checkbox" name="marathi" id="marathi">
+        <label for="marathi">Marathi</label>
+
+        <p><b>Choose a Car:</b></p>
+        <label for="car">Car:- </label>
+        <select name="car" id="car">
+            <option value="volvo">Volvo</option>
+            <option value="fiat">Fiat</option>
+            <option value="saab" selected>Saab</option>
+            <option value="audi">Audi</option>
+        </select>
+        <br>
+        <br>
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+
+    </form>
 </div>
 </body>
 </html> 
